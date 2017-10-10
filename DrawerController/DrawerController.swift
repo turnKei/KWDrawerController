@@ -260,6 +260,10 @@ open class DrawerController: UIViewController, UIGestureRecognizerDelegate {
         
     }
     
+    public func getViewController(forSide side: DrawerSide) -> UIViewController? {
+        return self.contentMap[side]?.viewController
+    }
+    
     /// Actions
     public func openSide(_ side: DrawerSide, completion: (()->())? = nil) {
         
